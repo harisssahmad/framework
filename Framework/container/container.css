@@ -1,0 +1,34 @@
+/* Created and owned by Haris Ahmad. Free to use */
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+/* CONTAINER */
+
+body {
+	margin: 4px;
+}
+
+.landing-container {
+	background-color: #DCD8CC;
+	border-radius: 8px;
+	padding: 45px 10px;
+	color: #08080D;
+}
+
+.landing-container > h1 {
+	margin: 2px;
+	font-weight: 400;
+}
+
+.landing-container >  p {
+	font-size: 17px;
+	margin-left: 5px;
+}
+
+.landing-container > hr {
+	border: 0;
+    height: 1px;
+    background-color: #adadad;
+}

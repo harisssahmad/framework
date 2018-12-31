@@ -1,0 +1,127 @@
+/* Created and owned by Haris Ahmad. Free to use */
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+/* BUTTONS */
+.btn {
+	padding: 10px 40px;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0 1px 2px rgba(41,52,204,.1), 0 2px 4px rgba(41,52,204,.2);
+	color: white;
+	background-position: center;
+  	transition: all 0.2s;
+  	position: relative;
+  	overflow: hidden;
+}
+
+.btn:hover {
+	opacity: 0.9;
+	box-shadow: 0 2px 3px rgba(41,52,204,.1), 0 4px 5px rgba(41,52,204,.2);
+	cursor: pointer;
+	background: inherit radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+
+.btn:focus {
+	outline: 0;
+}
+
+.btn:active {
+	background-color: inherit;
+  	background-size: 100%;
+  	transition: background 0.2s;
+}
+
+.with-ripple:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 5px;
+	height: 5px;
+	background: rgba(255, 255, 255, .5);
+	opacity: 0;
+	border-radius: 100%;
+	transform: scale(1, 1) translate(-50%);
+	transform-origin: 50% 50%;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+.with-ripple:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+
+.indigo-btn {
+	background-color: #3F51B5;
+}
+
+.indigo-btn:active {
+	background-color: #1B30A5;
+}
+
+.teal-btn {
+	background-color: #009688;
+}
+
+.teal-btn:active {
+	background-color: #00776C;
+}
+
+.blue-btn {
+	background-color: #2196F3;
+}
+
+.blue-btn:active {
+	background-color: #0076D4;
+}
+
+.pink-btn {
+	background-color: #E91E63;
+}
+
+.pink-btn:active {
+	background-color: #D9004A;
+}
+
+.black-btn {
+	background-color: #000000;
+}
+
+.black-btn:active {
+	background-color: #5D5D5D;
+}
+
+.large-btn {
+	font-size: 1.5em;
+}
+
+.small-btn {
+	font-size: 0.8em;
+	padding: 7px 15px;
+}
+
+.tiny-btn {
+	font-size: 0.7em;
+	padding: 5px;
+}
+
+.block-btn {
+	display: block;
+	width: 100%;
+}
