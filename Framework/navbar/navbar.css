@@ -1,0 +1,188 @@
+/* Created and owned by Haris Ahmad. Free to use */
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+/* NAVBAR */
+
+body {
+	margin: 0;
+}
+
+/* Indigo Color */
+
+.indigo-nav {
+	background-color: #3F51B5;
+}
+
+/* Teal Color */
+
+.teal-nav {
+	background-color: #009688;
+}
+
+/* Blue Color */
+
+.blue-nav {
+	background-color: #2196F3;
+}
+
+/* Pink Color */
+
+.pink-nav {
+	background-color: #E91E63;
+}
+
+/* Black Color */
+
+.black-nav {
+	background-color: #000000;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  /*position: fixed;
+  top: 0;*/
+  z-index: 50;
+  font-family: Roboto, 'sans-serif';
+  padding-top: 5px;
+}
+
+.nav > .nav-container {
+  width: 85%;
+  padding: 0 4%;
+  margin: 0 auto;
+}
+
+.nav > .nav-container > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-container > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 16px;
+  color: white;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-container > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-container > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 14px;
+}
+
+.nav > .nav-container > .nav-links > a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav > .nav-container > .nav-links > a:hover {
+  color: rgba(0, 0, 0, 0.5);
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.nav > .nav-container > .nav-links > .nav-link {
+  margin: 0 20px;
+}
+
+.nav > .nav-container > #nav-check {
+  display: none;
+}
+
+@media (max-width:999px) {
+
+  .nav > .nav-container > .nav-links > .nav-link {
+  margin: 0 10px;
+}
+
+}
+
+@media (max-width:785px) {
+
+.nav > .nav-container {
+  width: 90%;
+}
+
+}
+
+@media (max-width:768px) {
+  .nav > .nav-container > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 2%;
+    top: 0px;
+  }
+  .nav > .nav-container > .nav-btn > label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 15px;
+  }
+  .nav > .nav-container > .nav-btn > label > span {
+    display: block;
+    width: 20px;
+    height: 5px;
+    border-top: 2px solid white;
+    margin-left: 10px;
+  }
+  .nav > .nav-container > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: white;
+    color: black;
+    height: 0px;
+    transition: all 0.5s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav > .nav-container > .nav-links > a {
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    color: black;
+    font-size: 32px;
+    padding-bottom: 25px;
+    transition: all 400ms cubic-bezier(.25,.46,.45,.94);
+    opacity: 1;
+  }
+
+  .nav > .nav-container > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+  }
+  .nav > .nav-container > #nav-check:checked + .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
+  .nav > .nav-container > #nav-check:checked + .nav-links > a {
+    animation: fadeInDown 1s ease-in;
+  }
+}
+
+.nav {
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.nav-links {
+  font-size: 14px;
+}
+
+.nav-link {
+  padding: 10px;
+}
